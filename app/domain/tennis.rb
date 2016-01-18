@@ -1,8 +1,13 @@
 class TennisGame
+    def initialize
+        @score = "Love All"
+    end
+
     def get_score
-        "Love All"
+        @score
     end
 
     def server_scores
+        @score = "Fifteen Love"
     end
 end
