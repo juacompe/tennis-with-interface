@@ -30,4 +30,16 @@ RSpec.describe GameController, type: :controller do
             expect(game).to have_received(:server_scores)
         end
     end
+
+    describe "POST #receiver_scores" do
+        it "should redirects to home" do
+            post :receiver_scores
+            expect(response).to render_template(:home)
+        end
+
+        it "tell game that the receiver scores" do
+            post :receiver_scores
+            expect(game).to have_received(:receiver_scores)
+        end
+    end
 end

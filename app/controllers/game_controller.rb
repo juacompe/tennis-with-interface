@@ -16,6 +16,15 @@ class GameController < ApplicationController
 
     def server_scores
         game.server_scores
+        render_score
+    end
+
+    def receiver_scores
+        game.receiver_scores
+        render_score
+    end
+
+    def render_score
         home
         render :home
     end
