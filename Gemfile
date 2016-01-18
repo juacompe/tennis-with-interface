@@ -40,6 +40,7 @@ group :development, :test do
   gem 'capybara-screenshot'
   gem 'capybara-webkit'
   gem 'rspec-rails'
+  gem 'database_cleaner'
 end
 
 group :development do
