@@ -5,4 +5,10 @@ class GameController < ApplicationController
         t = TennisGame.new
         @score = t.get_score
     end
+
+    def server_scores
+        t = TennisGame.new
+        t.server_scores
+        render :home
+    end
 end

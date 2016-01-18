@@ -15,4 +15,18 @@ RSpec.describe GameController, type: :controller do
             expect(assigns(:score)).to eq "Score Text"
         end
     end
+
+    describe "POST #server_scores" do
+        it "should redirects to home" do
+            post :server_scores
+            expect(response).to render_template(:home)
+        end
+
+        it "tell game that the server scores" do
+            game = spy(TennisGame)
+            allow(TennisGame).to receive(:new).and_return(game)
+            post :server_scores
+            expect(game).to have_received(:server_scores)
+        end
+    end
 end
