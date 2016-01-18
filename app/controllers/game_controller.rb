@@ -1,5 +1,8 @@
+require_relative "../domain/tennis.rb"
+
 class GameController < ApplicationController
     def home
-        @score = "Love All"
+        t = TennisGame.new
+        @score = t.get_score
     end
 end
