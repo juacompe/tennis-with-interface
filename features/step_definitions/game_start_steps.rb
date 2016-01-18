@@ -1,7 +1,7 @@
 Given(/^Game starts$/) do
-    visit "http://localhost:3000/"
+    visit "/"
 end
 
-Then(/^Score should be "(.*?)"$/) do |arg1|
-    expect(page).to have_content arg1
+Then(/^Score should be "(.*?)"$/) do |score|
+    expect(page).to have_content score
 end
