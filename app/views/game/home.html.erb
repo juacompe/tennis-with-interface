@@ -8,9 +8,11 @@
 </head>
 <body>
 
-    <h1><%= @score %></h1>
+    <form method="POST" action="/server">
+        <h1><%= @score %></h1>
 
-    <button>Server scores</button>
+        <input type="submit" value="Server scores"></input>
+    </form>
 </body>
 </html>
 

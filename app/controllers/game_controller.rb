@@ -1,14 +1,21 @@
 require_relative "../domain/tennis.rb"
 
 class GameController < ApplicationController
+    skip_before_action :verify_authenticity_token
+
     def home
-        t = TennisGame.new
-        @score = t.get_score
+        if @game == nil
+            @game = TennisGame.new
+        end
+        @score = @game.get_score
     end
 
     def server_scores
-        t = TennisGame.new
-        t.server_scores
+        if @game == nil
+            @game = TennisGame.new
+        end
+        @game.server_scores
+        @score = @game.get_score
         render :home
     end
 end
