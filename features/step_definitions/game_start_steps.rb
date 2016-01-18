@@ -9,3 +9,7 @@ end
 When(/^Server scores a point$/) do
     click_on "Server scores"
 end
+
+When(/^Receiver scores a point$/) do
+    click_on "Receiver scores"
+end

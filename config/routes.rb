@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get '/', to: 'game#home'
   post '/server', to: 'game#server_scores'
+  post '/receiver', to: 'game#receiver_scores'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

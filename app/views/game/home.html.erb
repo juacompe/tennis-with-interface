@@ -8,10 +8,13 @@
 </head>
 <body>
 
-    <form method="POST" action="/server">
         <h1><%= @score %></h1>
 
+    <form method="POST" action="/server">
         <input type="submit" value="Server scores"></input>
+    </form>
+    <form method="POST" action="/receiver">
+        <input type="submit" value="Receiver scores"></input>
     </form>
 </body>
 </html>
