@@ -11,4 +11,10 @@ RSpec.describe TennisGame do
         t.server_scores
         expect(t.get_score).to eq "Fifteen Love"
     end
+
+    it "should have Love Fifteen after receiver scores" do
+        t = TennisGame.new
+        t.receiver_scores
+        expect(t.get_score).to eq "Love Fifteen"
+    end
 end
